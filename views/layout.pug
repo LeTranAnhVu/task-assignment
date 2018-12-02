@@ -2,16 +2,66 @@ doctype html
 html
 	head
 		title #{title} - FullStack Vietnam
-		link(rel='stylesheet', href='/css/style.css')
+		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css")
+		link(rel='stylesheet', href='/stylesheets/style.css')
 	body
+		//- header
+		header
+			nav.navbar.navbar-expand-lg.navbar-light.bg-light
+				a.navbar-brand(href="#")
+					img.img-fluid(src="../img/logo.png", alt="logo")
+				button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+					span.navbar-toggler-icon
+				#navbarSupportedContent.collapse.navbar-collapse
+					ul.navbar-nav.mr-auto
+						li.nav-item.active
+							a.nav-link(href="#")
+								| Home 
+								span.sr-only (current)
+						li.nav-item
+							a.nav-link(href="#") Link
+						li.nav-item.dropdown
+							a#navbarDropdown.nav-link.dropdown-toggle(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+								| Dropdown
+							.dropdown-menu(aria-labelledby="navbarDropdown")
+								a.dropdown-item(href="#") Action
+								a.dropdown-item(href="#") Another action
+								.dropdown-divider
+								a.dropdown-item(href="#") Something else here
+						li.nav-item
+							a.nav-link.disabled(href="#") Disabled
+					form.form-inline.my-2.my-lg-0
+						input.form-control.mr-sm-2(type="search" placeholder="Search" aria-label="Search")
+						button.btn.btn-outline-success.my-2.my-sm-0(type="submit") Search
+		//- end header
+
+
 		main 
-			.container.mt-3
+			.container-fluid.mt-3
 				.row
-					.col-sm-3
+					//- side-menu
+					.col-1
 						.list-group
-							a.list-group-item.list-group-item-action(href="/") Index
-							a.list-group-item.list-group-item-action(href="/about") About
-							a.list-group-item.list-group-item-action(href="/users") Users
+							a.list-group-item.list-group-item-action(href="/")
+								i.fa.fa-table
+							a.list-group-item.list-group-item-action(href="/about")
+								i.fa.fa-plus
+							a.list-group-item.list-group-item-action(href="/users")
+								i.fa.fa-user
+							a.list-group-item.list-group-item-action(href="/users")
+								i.fa.fa-cog
+							a.list-group-item.list-group-item-action(href="/users")
+								i.fa.fa-save
+							a.list-group-item.list-group-item-action(href="/users")
+								i.fa.fa-question
+					//- end side-menu
+
+					//- main content
 					.col
 						block content
+					//- end main content
+
+
+
+
 		script(src="/js/main.js")
