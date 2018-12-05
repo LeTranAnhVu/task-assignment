@@ -2,7 +2,17 @@ extends layout
 
 block content
 	h1= title
-	figure
-		img(src="./img/logo.png", alt="")
-	p Welcome to #{title}
-	
+	section.section-task.containter-fluid
+		.row
+			.col-lg-4.tasks-col
+				#tasks-mission
+					include ./components/taskbox
+
+			.col-lg-4.tasks-col
+				#tasks-processing
+					include ./components/taskbox
+
+			.col-lg-4.tasks-col
+				#tasks-done
+					include ./components/taskbox
+			

@@ -1,7 +1,7 @@
 {
-	"name": "fullstack-express",
+	"name": "task-assignment",
 	"version": "1.0.0",
-	"description": "Fullstack Vietnam lò đào tạo lập trình viên, designer chuyên nghiệp tại Sài Gòn. Chúng tôi là các chuyên gia uy tín trong lĩnh vực lập trình ứng dụng, thiết kế và sáng tạo. Gọi: 0 96 96 89 89 3",
+	"description": "",
 	"main": "app.js",
 	"private": true,
 	"scripts": {
@@ -16,12 +16,14 @@
 		"express": "~4.16.0",
 		"font-awesome": "^4.7.0",
 		"http-errors": "~1.6.2",
+		"jquery": "^3.3.1",
 		"morgan": "~1.9.0",
 		"node-sass-middleware": "0.11.0",
 		"nodemon": "^1.18.3",
+		"popper.js": "^1.14.6",
 		"pug": "2.0.0-beta11"
 	},
-	"author": "FullStack VietNam",
+	"author": "Le Tran Anh Vu",
 	"license": "ISC",
-	"homepage": "https://fullstackvietnam.com"
+	"homepage": ""
 }

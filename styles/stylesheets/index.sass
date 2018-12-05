@@ -1,2 +1,78 @@
 
+$done : #badc58
+$processing : #ff7f50
+$mission : #1e90ff
+$red : #ff7f50
 
+
+
+// ===================task box 
+.tasks-box
+	border: 1px $processing solid
+	border-radius: 3px
+	overflow: hidden
+	box-shadow: 0 0 2px 0 black
+
+	.task-title
+		background: $processing
+		color: white
+		padding: 10px
+		text-transform: capitalize
+		text-align: left
+		margin: 0
+	.tasks
+		width: 100%
+		padding: 10px
+// end ===================task box 
+
+// ===================task
+.task
+	border: 1px $processing solid
+	border-radius: 3px
+	padding: 10px
+	position: relative
+	.row
+		padding: 0
+		margin: 0
+		[class*="col-"]
+			padding: 0
+	&:hover
+		&:before
+			content: ""
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			width: 5px
+			background: $processing
+	.main-content
+		width: 100%
+		.item
+			width: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			.avatar
+				background: #dfdfdf
+				display: inline-flex
+				width: 50px
+				height: 50px
+				border-radius: 50%
+				justify-content: center
+				align-items: center
+			.inner-main-content
+				width: 80%
+				padding-right: 10px
+				.title
+					.task-code
+						font-weight: bold
+						color: $processing
+						padding-right: 10px
+					.task-name
+						color: $processing
+			.extra-features
+				width: 20%
+
+
+// end ===================task
