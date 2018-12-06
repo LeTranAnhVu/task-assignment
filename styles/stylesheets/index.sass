@@ -52,49 +52,60 @@ $theme-color : $mission
 	.task-box
 		flex-grow: 1
 		padding: 10px
+
+		
 		.main-content
 			width: 100%
-			.item
-				width: 100%
-				display: flex
-				justify-content: center
-				align-items: center
-				.priority
-					background: lighten($theme-color,30%)
-					display: inline-flex
-					width: 50px
-					height: 50px
-					border-radius: 50%
+			.row
+				flex-wrap: nowrap
+				.item
+					width: 100%
+					display: flex
 					justify-content: center
 					align-items: center
-					color: $theme-color
-					font-weight: bold
-					font-size: 2rem
-				.inner-main-content
-					width: 80%
-					padding-right: 10px
-					.title
-						.task-code
-							font-weight: bold
-							color: $theme-color
-							padding-right: 10px
-						.task-name
-							color: $theme-color
-					.desc
+					&.priority-col
+						padding-right: 5px
+						min-width: 50px
 						.priority
+							background: lighten($theme-color,30%)
+							display: inline-flex
+							width: 45px
+							height: 45px
+							border-radius: 50%
+							justify-content: center
+							align-items: center
 							color: $theme-color
-				.extra-features
-					width: 30%
-					display: flex
-					flex-flow: column nowrap
-					align-items: flex-end
-					.file-link
-						color: $theme-color
-					.task-toggle-btn
-						background: $theme-color
-						border-color: lighten($theme-color,10%)
-						i
-							color: white
+							font-size: 2rem
+					.inner-main-content
+						width: 80%
+						padding-right: 10px
+						.title
+							.task-code
+								font-weight: bold
+								color: $theme-color
+								padding-right: 10px
+							.task-name
+								color: $theme-color
+						.desc
+							.priority
+								color: $theme-color
+					.extra-features
+						// flex-grow: 1
+						width: 30%
+						display: flex
+						flex-flow: column nowrap
+						align-items: flex-end
+						.file-link
+							color: $theme-color
+							text-align: right
+							font-size: .8rem
+							font-style: italic
+							margin-bottom: 10px
+						.task-toggle-btn
+							background: $theme-color
+							border-color: lighten($theme-color,10%)
+							i
+								color: white
 		.collapse-content
 			padding-top: 5px
 			.card
@@ -104,13 +115,16 @@ $theme-color : $mission
 				border-top: 1px black solid
 	.task-move-box
 		width: 20px
+		position: relative
+		padding-left: 2px
 		.task-move-btn
 			position: absolute
 			top: 0
 			right: 0
-			width: 2px
+			width: 100%
 			height: 100%
 			display: flex
+			background: $theme-color
 			justify-content: center
 			align-items: center
 			border-radius: 0

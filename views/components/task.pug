@@ -2,7 +2,7 @@
 	.task-box
 		.main-content
 			.row
-				.col-2.item
+				.col-2.item.priority-col
 					.priority
 						span.priority-value N
 				.col-10.item
@@ -17,7 +17,7 @@
 							i.fa.fa-file-pdf
 							span.pl-2 Xem PDF
 						.task-toggle-btn.btn.btn-primary(data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1")
-								i.fa.fa-angle-down
+								i.fa.fa-angle-down(style="color:white")
 		.collapse-content
 			#multiCollapseExample1.collapse
 				.card.deadline-card
@@ -48,5 +48,6 @@
 						.col-4.item.offset-4
 							p.time-stamp 4 months ago
 	.task-move-box
-		.button.btn.btn-secondary.task-move-btn >
+		.button.task-move-btn
+			i.fa.fa-angle-right(style="color:white")
 		

@@ -6414,45 +6414,53 @@ html, body {
     padding: 10px; }
     .task .task-box .main-content {
       width: 100%; }
-      .task .task-box .main-content .item {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        .task .task-box .main-content .item .priority {
-          background: #b7dbff;
-          display: inline-flex;
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          justify-content: center;
-          align-items: center;
-          color: #1e90ff;
-          font-weight: bold;
-          font-size: 2rem; }
-        .task .task-box .main-content .item .inner-main-content {
-          width: 80%;
-          padding-right: 10px; }
-          .task .task-box .main-content .item .inner-main-content .title .task-code {
-            font-weight: bold;
-            color: #1e90ff;
-            padding-right: 10px; }
-          .task .task-box .main-content .item .inner-main-content .title .task-name {
-            color: #1e90ff; }
-          .task .task-box .main-content .item .inner-main-content .desc .priority {
-            color: #1e90ff; }
-        .task .task-box .main-content .item .extra-features {
-          width: 30%;
+      .task .task-box .main-content .row {
+        flex-wrap: nowrap; }
+        .task .task-box .main-content .row .item {
+          width: 100%;
           display: flex;
-          flex-flow: column nowrap;
-          align-items: flex-end; }
-          .task .task-box .main-content .item .extra-features .file-link {
-            color: #1e90ff; }
-          .task .task-box .main-content .item .extra-features .task-toggle-btn {
-            background: #1e90ff;
-            border-color: #51a9ff; }
-            .task .task-box .main-content .item .extra-features .task-toggle-btn i {
-              color: white; }
+          justify-content: center;
+          align-items: center; }
+          .task .task-box .main-content .row .item.priority-col {
+            padding-right: 5px;
+            min-width: 50px; }
+            .task .task-box .main-content .row .item.priority-col .priority {
+              background: #b7dbff;
+              display: inline-flex;
+              width: 45px;
+              height: 45px;
+              border-radius: 50%;
+              justify-content: center;
+              align-items: center;
+              color: #1e90ff;
+              font-size: 2rem; }
+          .task .task-box .main-content .row .item .inner-main-content {
+            width: 80%;
+            padding-right: 10px; }
+            .task .task-box .main-content .row .item .inner-main-content .title .task-code {
+              font-weight: bold;
+              color: #1e90ff;
+              padding-right: 10px; }
+            .task .task-box .main-content .row .item .inner-main-content .title .task-name {
+              color: #1e90ff; }
+            .task .task-box .main-content .row .item .inner-main-content .desc .priority {
+              color: #1e90ff; }
+          .task .task-box .main-content .row .item .extra-features {
+            width: 30%;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-end; }
+            .task .task-box .main-content .row .item .extra-features .file-link {
+              color: #1e90ff;
+              text-align: right;
+              font-size: .8rem;
+              font-style: italic;
+              margin-bottom: 10px; }
+            .task .task-box .main-content .row .item .extra-features .task-toggle-btn {
+              background: #1e90ff;
+              border-color: #51a9ff; }
+              .task .task-box .main-content .row .item .extra-features .task-toggle-btn i {
+                color: white; }
     .task .task-box .collapse-content {
       padding-top: 5px; }
       .task .task-box .collapse-content .card {
@@ -6461,14 +6469,17 @@ html, body {
         border-radius: 0;
         border-top: 1px black solid; }
   .task .task-move-box {
-    width: 20px; }
+    width: 20px;
+    position: relative;
+    padding-left: 2px; }
     .task .task-move-box .task-move-btn {
       position: absolute;
       top: 0;
       right: 0;
-      width: 2px;
+      width: 100%;
       height: 100%;
       display: flex;
+      background: #1e90ff;
       justify-content: center;
       align-items: center;
       border-radius: 0; }
@@ -6481,8 +6492,44 @@ html, body {
   .addtask-input-box .box-title {
     width: 100%;
     background: #1e90ff;
-    color: white; }
+    color: white;
+    padding: 15px 40px; }
+  .addtask-input-box select {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none; }
+  .addtask-input-box select::-ms-expand {
+    display: none; }
+  .addtask-input-box input[type='date']::-webkit-datetime-edit-text, .addtask-input-box input[type='date']::-webkit-datetime-edit-month-field, .addtask-input-box input[type='date']::-webkit-datetime-edit-day-field, .addtask-input-box input[type='date']::-webkit-datetime-edit-year-field {
+    -webkit-appearance: none; }
   .addtask-input-box .box-content {
     padding: 10px; }
     .addtask-input-box .box-content .addtask-input-item {
-      margin-top: 20px; }
+      margin-bottom: 30px; }
+      .addtask-input-box .box-content .addtask-input-item:first-child {
+        margin-top: 10px; }
+
+.input-custom-style-01 {
+  position: relative;
+  height: 50px; }
+  .input-custom-style-01 label {
+    position: absolute;
+    z-index: 500;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: all .5s ease-in-out;
+    font-size: 1rem; }
+  .input-custom-style-01 input {
+    width: 100%;
+    height: 100%; }
+  .input-custom-style-01:hover label {
+    font-size: .8rem;
+    font-style: italic;
+    opacity: .8;
+    transform: translateY(-120%); }
+  .input-custom-style-01:hover input {
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold; }

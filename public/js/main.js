@@ -1,2 +1,6 @@
-// Code 
-console.log('FullStack Vietnam')
+// Code
+// $(document).ready(
+	tinymce.init({
+		selector: '#mytextarea'
+	  })
+// )
