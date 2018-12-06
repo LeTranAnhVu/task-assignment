@@ -3,18 +3,18 @@ $done : #badc58
 $processing : #ff7f50
 $mission : #1e90ff
 $red : #ff7f50
-
+$theme-color : $mission
 
 
 // ===================task box 
 .tasks-box
-	border: 1px $processing solid
+	border: 1px $theme-color solid
 	border-radius: 3px
 	overflow: hidden
 	box-shadow: 0 0 2px 0 black
 
 	.task-title
-		background: $processing
+		background: $theme-color
 		color: white
 		padding: 10px
 		text-transform: capitalize
@@ -27,10 +27,13 @@ $red : #ff7f50
 
 // ===================task
 .task
-	border: 1px $processing solid
+	border: 1px $theme-color solid
 	border-radius: 3px
-	padding: 10px
+	
 	position: relative
+	display: flex
+	i
+		color: $theme-color
 	.row
 		padding: 0
 		margin: 0
@@ -45,34 +48,69 @@ $red : #ff7f50
 			left: 0
 			height: 100%
 			width: 5px
-			background: $processing
-	.main-content
-		width: 100%
-		.item
+			background: $theme-color
+	.task-box
+		flex-grow: 1
+		padding: 10px
+		.main-content
 			width: 100%
+			.item
+				width: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				.avatar
+					background: #dfdfdf
+					display: inline-flex
+					width: 50px
+					height: 50px
+					border-radius: 50%
+					justify-content: center
+					align-items: center
+				.inner-main-content
+					width: 80%
+					padding-right: 10px
+					.title
+						.task-code
+							font-weight: bold
+							color: $theme-color
+							padding-right: 10px
+						.task-name
+							color: $theme-color
+					.desc
+						.priority
+							color: $theme-color
+				.extra-features
+					width: 30%
+					display: flex
+					flex-flow: column nowrap
+					align-items: flex-end
+					.file-link
+						color: $theme-color
+					.task-toggle-btn
+						background: $theme-color
+						border-color: lighten($theme-color,10%)
+						i
+							color: white
+		.collapse-content
+			padding-top: 5px
+			.card
+				padding: 5px 10px
+				border: 0
+				border-radius: 0
+				border-top: 1px black solid
+	.task-move-box
+		width: 20px
+		.task-move-btn
+			position: absolute
+			top: 0
+			right: 0
+			width: 2px
+			height: 100%
 			display: flex
 			justify-content: center
 			align-items: center
-			.avatar
-				background: #dfdfdf
-				display: inline-flex
-				width: 50px
-				height: 50px
-				border-radius: 50%
-				justify-content: center
-				align-items: center
-			.inner-main-content
-				width: 80%
-				padding-right: 10px
-				.title
-					.task-code
-						font-weight: bold
-						color: $processing
-						padding-right: 10px
-					.task-name
-						color: $processing
-			.extra-features
-				width: 20%
+			border-radius: 0
 
 
 // end ===================task
