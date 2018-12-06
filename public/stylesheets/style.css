@@ -6419,14 +6419,17 @@ html, body {
         display: flex;
         justify-content: center;
         align-items: center; }
-        .task .task-box .main-content .item .avatar {
-          background: #dfdfdf;
+        .task .task-box .main-content .item .priority {
+          background: #b7dbff;
           display: inline-flex;
           width: 50px;
           height: 50px;
           border-radius: 50%;
           justify-content: center;
-          align-items: center; }
+          align-items: center;
+          color: #1e90ff;
+          font-weight: bold;
+          font-size: 2rem; }
         .task .task-box .main-content .item .inner-main-content {
           width: 80%;
           padding-right: 10px; }
@@ -6469,3 +6472,17 @@ html, body {
       justify-content: center;
       align-items: center;
       border-radius: 0; }
+
+.section-addtask .addtask-container {
+  margin-top: 100px; }
+
+.addtask-input-box {
+  border: 1px #1e90ff solid; }
+  .addtask-input-box .box-title {
+    width: 100%;
+    background: #1e90ff;
+    color: white; }
+  .addtask-input-box .box-content {
+    padding: 10px; }
+    .addtask-input-box .box-content .addtask-input-item {
+      margin-top: 20px; }
